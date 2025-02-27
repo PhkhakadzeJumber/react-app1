@@ -1,0 +1,195 @@
+.container {
+
+  margin-top: 50px;
+  margin-left: 75px;
+  width: 100%;
+  
+}
+
+.sign-in-container {
+
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding-bottom: 30px;
+  margin-top: 60px;
+
+}
+
+.sign-in-header {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  margin-top: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.text {
+
+  color: #3c009d;
+  font-size: 48px;
+  font-weight: 700;
+
+}
+
+.underline {
+
+  width: 61px;
+  height: 6px;
+  background: #3c009d;
+  border-radius: 9px;
+
+}
+
+.inputs {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  margin-top: 55px;
+
+}
+
+.input {
+
+  display: flex;
+  align-items: center;
+  width: 480px;
+  height: 70px;
+  background: #eaeaea;
+  border-radius: 6px;
+  padding-left: 30px;
+
+}
+
+.input input {
+
+  height: 50px;
+  width: 400px;
+  background:  transparent;
+  border: none;
+  outline: none;
+  color: #797979;
+  font-size: 19px;
+  margin-left: 30px;
+
+}
+
+.forgot {
+
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 500px;
+  margin-top: 30px;
+  cursor: pointer;
+  color: #4c00b4;
+
+}
+
+.submit-choices {
+
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 20px auto;
+
+}
+
+.submit {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  height: 50px;
+  width: 200px;
+  border-radius: 40px;
+  cursor: pointer;
+
+  color: white;
+  background: #4c00b4;
+
+}
+
+.diff-settings {
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 150px;
+  padding-top: 100px;
+
+}
+
+.line {
+
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 400px;
+  margin-bottom: 10px;
+  border-bottom-style: dashed;
+  border-color: lightgray;
+
+}
+
+.settings-text {
+
+  font-family: Arial, Helvetica, sans-serif;
+  flex: 1;
+
+}
+
+.switch {
+
+  margin-right: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+
+.add-profile {
+
+  margin-right: 10px;
+  width: 55px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+
+.about {
+
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding-left: 150px;
+  padding-top: 100px;
+  
+}
+
+.about-text {
+  margin-bottom: 8px;
+}
+
+.cart-page {
+
+  margin-left: 50px;
+  margin-top: 100px;
+  
+}
+
+
+
+
+

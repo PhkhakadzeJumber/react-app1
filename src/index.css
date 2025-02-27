@@ -1,0 +1,167 @@
+.header {
+
+  display: flex;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 55px;
+
+  background-color: lightgrey;
+  padding-top: 15px;
+  padding-left: 15px;
+
+}
+
+.left-section {
+  
+  display: flex;
+  width: 400px;
+  justify-content: flex-end;
+  
+}
+
+.website-name {
+
+  display: flex;
+  align-items: center;
+  height: 55px;
+  font-size: 18px; 
+  color: red; 
+  background-color: lightgray;
+  border: none;
+  cursor: pointer;
+
+}
+
+.website-name:hover {
+  opacity: 0.8;
+}
+
+.search {
+
+  flex: 1;
+  max-width: 400px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+
+}
+
+.right-section {
+
+  width: 300px;
+  background-color: lightgreen;
+  display: flex;
+  align-items: center;
+
+}
+
+.search-bar {
+
+  flex: 1;
+  height: 31px;
+  padding-left: 10px;
+  font-size: 15px;
+  border-color: grey;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+  outline: none;
+
+}
+
+.search-bar::placeholder {
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+
+}
+
+.search-button {
+
+  height: 35px;
+  width: 45px;
+  border-color: grey;
+  border-width: 1px;
+  border-style: solid;
+  margin-left: -10px;
+  cursor: pointer;
+
+}
+
+.profile {
+
+  padding-left: 20px;
+ 
+}
+
+.side-bar {
+
+  background-color: lightgray;
+  color: white;
+
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 70px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+
+.side-bar-p1 {
+
+  padding-top: 50px;
+  padding-bottom: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.side-bar-p2 {
+
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+}
+
+.side-bar-p3 {
+
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+}
+
+.side-bar-p4 {
+
+  padding-top: 40px;
+  padding-bottom: 50px;
+
+}
+
+.btn {
+
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  height: 60px;
+  transition: opacity 0.1s;
+
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn:active {
+  opacity: 0.7;
+}
+

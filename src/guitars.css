@@ -117,3 +117,20 @@
 
 }
 
+.select-button {
+  width: 80px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  background-color: yellow;
+  border-radius: 4px;
+}
+
+.select-button:hover {
+  opacity: 0.9;
+}
+
+.select-button:active {
+  opacity: 0.7;
+}
+

@@ -29,6 +29,8 @@ function CartCard({cartItem}) {
         <p>amount: {cartItem.amount}</p>
       </div>
 
+      <button className='select-button'>select</button>
+
     </div>
 
     </div>

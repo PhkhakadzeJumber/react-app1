@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import GuitarCard from './GuitarCard';
+import "./guitars.css"
 
 import flyingV from './assets/flyingV.jpg';
 import lesPaul from './assets/lesPaul.jpg';
@@ -23,9 +24,41 @@ function Home() {
   const guitar8 = {image: Ibanez, name: "ibanez", year: 1992, price: 3500, amount: 40};
   const guitar9 = {image: acoustic, name: "acoustic", year: 2020, price: 200, amount: 200};
 
-  const guitars = [guitar1, guitar2, guitar3, guitar4, guitar5, guitar6, guitar7, guitar8, guitar9];
+  const og_guitars = [guitar1, guitar2, guitar3, guitar4, guitar5, guitar6, guitar7, guitar8, guitar9]
+
+  const [guitars, setGuitars] = useState(og_guitars);
+
+  function sortGuitars(type) {
+    let sortedArray = [...guitars];
+
+    if(type == "") {
+      setGuitars(og_guitars);
+      return;
+    }
+
+    switch(type) {
+      case "name":
+        sortedArray.sort((a, b) => a.name.localeCompare(b.name));
+        break;
+      case "year":
+        sortedArray.sort((a, b) => a.year - b.year);
+        break;
+      case "price":
+        sortedArray.sort((a, b) => a.price - b.price);
+        break;
+      case "amount":
+        sortedArray.sort((a, b) => a.amount - b.amount);
+        break;
+    }
+
+    setGuitars(sortedArray);
+  }
 
   console.log("Guitars array:", guitars);
+
+  const [counter, setCounter] = useState(0);
+
+  const incrementCounter = () => setCounter(counter + 1);
 
   return (
 
@@ -34,35 +67,34 @@ function Home() {
     <div className='sorting'> 
 
       <div className='sort-by'>
-        <select>
-          <option>sort items</option>
-          <option>by name</option>
-          <option>by year</option>
-          <option>by price</option>
-          <option>by amount</option>
+        <select onChange={(e) => sortGuitars(e.target.value)}>
+          <option value="">sort items</option>
+          <option value="name">by name</option>
+          <option value="year">by year</option>
+          <option value="price">by price</option>
+          <option value="amount">by amount</option>
         </select>
       </div>
 
       <div className='num-in-cart'>
-        number of items in the cart:<span className='num-of-items'>0</span>
+        <span>number of items in the cart: {counter}</span> 
       </div>
 
     </div>
 
     <div className='website-content'> 
       <div className='first-col'>
-      {guitars.filter((_, index) => index % 3 == 0).map((guitar) => (<GuitarCard key={guitar.name} guitar={guitar} /> ))}
+      {guitars.filter((_, index) => index % 3 == 0).map((guitar) => (<GuitarCard key={guitar.name} guitar={guitar} onAddToCart={incrementCounter}/> ))}
       </div>
       <div className='second-col'>
-      {guitars.filter((_, index) => index % 3 == 1).map((guitar) => (<GuitarCard key={guitar.name} guitar={guitar} /> ))} 
+      {guitars.filter((_, index) => index % 3 == 1).map((guitar) => (<GuitarCard key={guitar.name} guitar={guitar} onAddToCart={incrementCounter}/> ))} 
       </div>
       <div className='third-col'>
-      {guitars.filter((_, index) => index % 3 == 2).map((guitar) => (<GuitarCard key={guitar.name} guitar={guitar} /> ))}
+      {guitars.filter((_, index) => index % 3 == 2).map((guitar) => (<GuitarCard key={guitar.name} guitar={guitar} onAddToCart={incrementCounter}/> ))}
       </div>
     </div>
   
   </div>
-   
 
   );
 

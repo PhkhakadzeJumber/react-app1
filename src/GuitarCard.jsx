@@ -1,7 +1,7 @@
 import React from 'react';
 import './guitars.css'
 
-function GuitarCard({guitar}) {
+function GuitarCard({guitar, onAddToCart}) {
 
   return (
 
@@ -31,7 +31,7 @@ function GuitarCard({guitar}) {
 
       <div className='guitar-buttons'>
         <button className='guitar-button'>Pay Now</button>
-        <button className='guitar-button'> Add to cart</button>
+        <button className='guitar-button' onClick={onAddToCart}> Add to cart</button>
       </div>
 
     </div>

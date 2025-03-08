@@ -186,7 +186,70 @@
 
   margin-left: 50px;
   margin-top: 100px;
+  display: flex;
   
+}
+
+.clear-cart {
+
+  height: 50px;
+  width: 80px;
+  background-color: lightcoral;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: 0.15s;
+
+}
+
+.clear-cart:hover {
+  opacity: 0.9;
+}
+
+.clear-cart:active {
+  opacity: 0.7;
+}
+
+.delete-item {
+
+  height: 50px;
+  width: 80px;
+  background-color: lightgreen;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: 0.15s;
+  margin-left: 35px;
+
+}
+
+.delete-item:hover {
+  opacity: 0.9;
+}
+
+.delete-item:active {
+  opacity: 0.7;
+}
+
+.buy-item {
+
+  height: 50px;
+  width: 80px;
+  background-color: lightblue;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: 0.15s;
+  margin-left: 35px;
+
+}
+
+.buy-item:hover {
+  opacity: 0.9;
+}
+
+.buy-item:active {
+  opacity: 0.7;
 }
 
 

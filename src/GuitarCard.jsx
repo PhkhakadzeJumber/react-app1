@@ -1,7 +1,12 @@
 import React from 'react';
 import './guitars.css'
 
-function GuitarCard({guitar, onAddToCart}) {
+function GuitarCard({guitar, updateCart, onAddToCart}) {
+
+  const handleClick = () => {
+    onAddToCart()
+    updateCart(guitar)
+  }
 
   return (
 
@@ -31,7 +36,7 @@ function GuitarCard({guitar, onAddToCart}) {
 
       <div className='guitar-buttons'>
         <button className='guitar-button'>Pay Now</button>
-        <button className='guitar-button' onClick={onAddToCart}> Add to cart</button>
+        <button className='guitar-button' onClick={handleClick}> Add to cart</button>
       </div>
 
     </div>

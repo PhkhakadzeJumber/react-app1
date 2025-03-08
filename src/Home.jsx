@@ -56,9 +56,16 @@ function Home() {
 
   console.log("Guitars array:", guitars);
 
+  const [cart, setCart] = useState([])
   const [counter, setCounter] = useState(0);
 
+  const updateCart = (guitar) => {
+    setCart((prevCart) => [...prevCart, guitar])
+  }
+
   const incrementCounter = () => setCounter(counter + 1);
+
+  console.log("cart array:", cart);
 
   return (
 
@@ -84,13 +91,13 @@ function Home() {
 
     <div className='website-content'> 
       <div className='first-col'>
-      {guitars.filter((_, index) => index % 3 == 0).map((guitar) => (<GuitarCard key={guitar.name} guitar={guitar} onAddToCart={incrementCounter}/> ))}
+      {guitars.filter((_, index) => index % 3 == 0).map((guitar) => (<GuitarCard key={guitar.name} guitar={guitar} updateCart={updateCart} onAddToCart={incrementCounter}/> ))}
       </div>
       <div className='second-col'>
-      {guitars.filter((_, index) => index % 3 == 1).map((guitar) => (<GuitarCard key={guitar.name} guitar={guitar} onAddToCart={incrementCounter}/> ))} 
+      {guitars.filter((_, index) => index % 3 == 1).map((guitar) => (<GuitarCard key={guitar.name} guitar={guitar} updateCart={updateCart} onAddToCart={incrementCounter}/> ))} 
       </div>
       <div className='third-col'>
-      {guitars.filter((_, index) => index % 3 == 2).map((guitar) => (<GuitarCard key={guitar.name} guitar={guitar} onAddToCart={incrementCounter}/> ))}
+      {guitars.filter((_, index) => index % 3 == 2).map((guitar) => (<GuitarCard key={guitar.name} guitar={guitar} updateCart={updateCart} onAddToCart={incrementCounter}/> ))}
       </div>
     </div>
   

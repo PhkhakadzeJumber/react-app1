@@ -17,7 +17,15 @@ function page1({cart}) {
       </div>
 
       <div className='cart-items'>
-        
+        <div className='first-col'>
+        {cart.filter((_, index) => index % 3 == 0).map((item) => (<CartCard key={item.name} cartItem={item} />))}
+        </div>
+        <div className='second-col'>
+        {cart.filter((_, index) => index % 3 == 1).map((item) => (<CartCard key={item.name} cartItem={item} />))} 
+        </div>
+        <div className='third-col'>
+        {cart.filter((_, index) => index % 3 == 2).map((item) => (<CartCard key={item.name} cartItem={item} />))}
+        </div>
       </div>
     
     </div>

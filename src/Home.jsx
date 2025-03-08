@@ -12,7 +12,7 @@ import Telecaster from './assets/telecaster.jpg';
 import Ibanez from './assets/ibanez.jpg';
 import acoustic from './assets/acoustic.jpg';
 
-function Home() {
+function Home({cart, setCart}) {
 
   const guitar1 = {image: flyingV, name: "flyingV", year: 1980, price: 2000, amount: 50};
   const guitar2 = {image: lesPaul, name: "lesPaul", year: 1990, price: 3000, amount: 30};
@@ -24,7 +24,7 @@ function Home() {
   const guitar8 = {image: Ibanez, name: "ibanez", year: 1992, price: 3500, amount: 40};
   const guitar9 = {image: acoustic, name: "acoustic", year: 2020, price: 200, amount: 200};
 
-  const og_guitars = [guitar1, guitar2, guitar3, guitar4, guitar5, guitar6, guitar7, guitar8, guitar9]
+  const og_guitars = [guitar1, guitar2, guitar3, guitar4, guitar5, guitar6, guitar7, guitar8, guitar9];
 
   const [guitars, setGuitars] = useState(og_guitars);
 
@@ -56,14 +56,15 @@ function Home() {
 
   console.log("Guitars array:", guitars);
 
-  const [cart, setCart] = useState([])
   const [counter, setCounter] = useState(0);
 
-  const updateCart = (guitar) => {
-    setCart((prevCart) => [...prevCart, guitar])
-  }
-
   const incrementCounter = () => setCounter(counter + 1);
+
+  const updateCart = (guitar) => {
+    if(!cart.includes(guitar)) {
+      setCart((prevCart) => [...prevCart, guitar])
+    }
+  }
 
   console.log("cart array:", cart);
 

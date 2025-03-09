@@ -9,7 +9,7 @@
   left: 0;
   height: 55px;
 
-  background-color: lightgrey;
+  background-color: lightblue;
   padding-top: 15px;
   padding-left: 15px;
 
@@ -30,7 +30,7 @@
   height: 55px;
   font-size: 18px; 
   color: red; 
-  background-color: lightgray;
+  background-color: lightblue;
   border: none;
   cursor: pointer;
 
@@ -55,7 +55,7 @@
 .right-section {
 
   width: 300px;
-  background-color: lightgreen;
+  background-color: lightblue;
   display: flex;
   align-items: center;
 
@@ -103,7 +103,7 @@
 
 .side-bar {
 
-  background-color: lightgray;
+  background-color: lightblue;
   color: white;
 
   position: fixed;
@@ -147,7 +147,7 @@
 .btn {
 
   cursor: pointer;
-  background-color: white;
+  background-color: lightcyan;
   border: none;
   align-items: center;
   justify-content: center;

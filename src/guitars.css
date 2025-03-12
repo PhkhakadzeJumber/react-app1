@@ -37,12 +37,16 @@
   background-color: lightgreen;
   border-radius: 40px;
   cursor: pointer;
-  transition: box-shadow 0.15s ease-in-out;
+  transition: box-shadow 0.1s ease-in-out;
   
 }
 
 .guitar:hover {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.guitar.selected {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.8);
 }
 
 .guitar-image {

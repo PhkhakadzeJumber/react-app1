@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './guitars.css'
 
-function CartCard({cartItem}) {
+function CartCard({cartItem, indexes, setIndexes}) {
+
+  const [isSelected, setIsSelected] = useState(false);
+
+  const handleSelect = () => {
+    setIsSelected(true);
+    if(!indexes.includes(cartItem.name))
+      indexes.push(cartItem.name);
+  }
 
   return (
     
-    <div className='guitar'>
+    <div className={`guitar ${isSelected ? "selected" : ""}`}>
 
     <div className='guitar-image'>
       <img src={cartItem.image} alt={cartItem.name} />
@@ -29,7 +37,7 @@ function CartCard({cartItem}) {
         <p>amount: {cartItem.amount}</p>
       </div>
 
-      <button className='select-button'>select</button>
+      <button className='select-button' onClick={handleSelect}>select</button>
 
     </div>
 

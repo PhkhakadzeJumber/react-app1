@@ -305,6 +305,14 @@
   border: none;
 }
 
+.pay-choice:hover {
+  opacity: 0.85;
+}
+
+.pay-choice:active {
+  opacity: 0.75;
+}
+
 .go-home {
   margin-top: 80px;
 }

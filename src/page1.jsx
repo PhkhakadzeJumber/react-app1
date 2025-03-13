@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './otherPages.css';
 import CartCard from './cartCard';
-import { useLocation } from 'react-router-dom';  
+
+import { useState } from 'react';
 
 function page1({cart, setCart}) {
 
+  const [sum, setSum] = useState(0);
   const[indexes, setIndexes] = useState([]);
 
   const clearCart = () => setCart([]);
@@ -14,9 +16,23 @@ function page1({cart, setCart}) {
     setCart(filteredCart);  
   }
 
+  const buyItems = () => {
+    const filteredCart = cart.filter((item) => indexes.some((name) => name === item.name)); 
+    const s = filteredCart.reduce((acc, item) => acc + item.price, 0);
+    setSum(s);
+    deleteItems();
+  }
+
+  const buyAll = () => {
+    const s = cart.reduce((acc, item) => acc + item.price, 0);
+    setSum(s);
+    clearCart();
+  }
+
+  console.log("total price:", sum);
   console.log("indexes array:", indexes);
   console.log("cart array:", cart);
-  
+
   return (
 
     <div className='container'>
@@ -24,8 +40,8 @@ function page1({cart, setCart}) {
       <div className='cart-page'>
         <button className='clear-cart' onClick={clearCart}>clear cart</button>
         <button className='delete-item' onClick={deleteItems}>delete item</button>
-        <button className='buy-item'>buy all</button>
-        <button className='buy-item'>buy item</button>
+        <button className='buy-item' onClick={buyAll}>buy all</button>
+        <button className='buy-item' onClick={buyItems}>buy item</button>
       </div>
 
       <div className='cart-items'>

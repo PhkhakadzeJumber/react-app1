@@ -12,7 +12,7 @@ function Layout() {
 
     <>
 
-    {location.pathname !== '/LoginSignup' && <Navbar />}
+    {location.pathname !== '/LoginSignup' && location.pathname !== '/Pay' && <Navbar />}
 
     <main>
       <Outlet/>

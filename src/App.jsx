@@ -7,6 +7,7 @@ import Layout from './Layout.jsx';
 import Page1 from './page1.jsx';
 import Page2 from './page2.jsx';
 import LoginSignup from './LoginSignup.jsx';
+import Pay from './Pay.jsx';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/page1" element={<Page1 cart={cart} setCart={setCart}/>}/>
           <Route path="/page2" element={<Page2/>}/>
           <Route path="/LoginSignup" element={<LoginSignup/>}/>
+          <Route path="/Pay" element={<Pay/>}/>
 
         </Route>
       </Routes>

@@ -1,6 +1,8 @@
 import React from 'react';
 import './guitars.css'
 
+import { Link } from 'react-router-dom';
+
 function GuitarCard({guitar, updateCart, onAddToCart}) {
 
   const handleClick = () => {
@@ -35,7 +37,9 @@ function GuitarCard({guitar, updateCart, onAddToCart}) {
       </div>
 
       <div className='guitar-buttons'>
-        <button className='guitar-button'>Pay Now</button>
+        <Link to='/Pay'>
+          <button className='guitar-button'>Pay Now</button>
+        </Link>
         <button className='guitar-button' onClick={handleClick}> Add to cart</button>
       </div>
 

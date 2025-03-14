@@ -3,10 +3,9 @@ import './index.css';
 import { Link } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faGuitar, faSearch, faShoppingCart, faPlusSquare, faHistory, faCog, faBackspace } from '@fortawesome/free-solid-svg-icons';
+import { faGuitar, faSearch, faShoppingCart, faPlusSquare, faHistory, faCog } from '@fortawesome/free-solid-svg-icons';
 
-
-function Navbar() {
+function Navbar({searchQuery, setSearchQuery}) {
 
   const style1 = {display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'};
 
@@ -29,7 +28,10 @@ function Navbar() {
     
         <div className='search'>
     
-          <input className='search-bar' type='text' placeholder='Search' />  
+        <input className='search-bar' type='text' placeholder='Search' 
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />  
     
         <button className="search-button">
           <FontAwesomeIcon icon={faSearch} />

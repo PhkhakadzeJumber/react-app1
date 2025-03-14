@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import GuitarCard from './GuitarCard';
-import "./guitars.css"
+import "./guitars.css";
+
+import { useOutletContext } from "react-router-dom";
+import { useState, useEffect } from 'react';
 
 import flyingV from './assets/flyingV.jpg';
 import lesPaul from './assets/lesPaul.jpg';
@@ -27,6 +30,19 @@ function Home({cart, setCart}) {
   const og_guitars = [guitar1, guitar2, guitar3, guitar4, guitar5, guitar6, guitar7, guitar8, guitar9];
 
   const [guitars, setGuitars] = useState(og_guitars);
+  
+  const searchQuery = useOutletContext();
+  console.log("searchQuery from context:", searchQuery);
+
+  useEffect(() => {
+    if(searchQuery.trim() != "") {
+      const filteredGuitars = 
+        og_guitars.filter((guitar) => guitar.name.toLowerCase().includes(searchQuery.toLowerCase()));
+      setGuitars(filteredGuitars);
+    } else {
+      setGuitars(og_guitars);
+    }
+  }, [searchQuery]);
 
   function sortGuitars(type) {
     let sortedArray = [...guitars];

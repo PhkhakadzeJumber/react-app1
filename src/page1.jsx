@@ -3,11 +3,14 @@ import './otherPages.css';
 import CartCard from './cartCard';
 
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function page1({cart, setCart}) {
 
+  const navigate = useNavigate(); 
+
   const [sum, setSum] = useState(0);
-  const[indexes, setIndexes] = useState([]);
+  const [indexes, setIndexes] = useState([]);
 
   const clearCart = () => setCart([]);
   const deleteItems = () => {
@@ -21,12 +24,14 @@ function page1({cart, setCart}) {
     const s = filteredCart.reduce((acc, item) => acc + item.price, 0);
     setSum(s);
     deleteItems();
+    navigate('/Pay', { state: sum });
   }
 
   const buyAll = () => {
     const s = cart.reduce((acc, item) => acc + item.price, 0);
     setSum(s);
     clearCart();
+    navigate('/Pay', { state: sum });
   }
 
   console.log("total price:", sum);

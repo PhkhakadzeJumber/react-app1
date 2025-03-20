@@ -262,8 +262,9 @@
 .pay-page {
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  margin-left: 65px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -278,6 +279,7 @@
   height: 400px;
   border-radius: 10px;
   margin-right: 20px;
+  font-size: 110%;
 }
 
 .small-container {
@@ -314,7 +316,14 @@
 }
 
 .go-home {
-  margin-top: 80px;
+  width: 150px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin-top: 60px;
+  cursor: pointer;
 }
 
 

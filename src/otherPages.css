@@ -326,6 +326,15 @@
   cursor: pointer;
 }
 
+.congratulate {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 40px;
+  font-size: 150%;
+}
+
 
 
 

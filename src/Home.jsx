@@ -15,7 +15,7 @@ import Telecaster from './assets/telecaster.jpg';
 import Ibanez from './assets/ibanez.jpg';
 import acoustic from './assets/acoustic.jpg';
 
-function Home({cart, setCart}) {
+function Home({cart, setCart, setSum}) {
 
   const guitar1 = {image: flyingV, name: "flyingV", year: 1980, price: 2000, amount: 50};
   const guitar2 = {image: lesPaul, name: "lesPaul", year: 1990, price: 3000, amount: 30};
@@ -108,13 +108,13 @@ function Home({cart, setCart}) {
 
     <div className='website-content'> 
       <div className='first-col'>
-      {guitars.filter((_, index) => index % 3 == 0).map((guitar) => (<GuitarCard key={guitar.name} guitar={guitar} updateCart={updateCart} onAddToCart={incrementCounter}/> ))}
+      {guitars.filter((_, index) => index % 3 == 0).map((guitar) => (<GuitarCard key={guitar.name} guitar={guitar} updateCart={updateCart} onAddToCart={incrementCounter} setSum={setSum}/> ))}
       </div>
       <div className='second-col'>
-      {guitars.filter((_, index) => index % 3 == 1).map((guitar) => (<GuitarCard key={guitar.name} guitar={guitar} updateCart={updateCart} onAddToCart={incrementCounter}/> ))} 
+      {guitars.filter((_, index) => index % 3 == 1).map((guitar) => (<GuitarCard key={guitar.name} guitar={guitar} updateCart={updateCart} onAddToCart={incrementCounter} setSum={setSum}/> ))} 
       </div>
       <div className='third-col'>
-      {guitars.filter((_, index) => index % 3 == 2).map((guitar) => (<GuitarCard key={guitar.name} guitar={guitar} updateCart={updateCart} onAddToCart={incrementCounter}/> ))}
+      {guitars.filter((_, index) => index % 3 == 2).map((guitar) => (<GuitarCard key={guitar.name} guitar={guitar} updateCart={updateCart} onAddToCart={incrementCounter} setSum={setSum}/> ))}
       </div>
     </div>
   

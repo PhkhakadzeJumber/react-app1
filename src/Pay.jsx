@@ -2,14 +2,13 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCreditCard, faWallet, faQrcode} from '@fortawesome/free-solid-svg-icons';
 
 import Image from './assets/wallpaper.jpg';
 
-function Pay() {
+function Pay({sum}) {
 
     const [currentDate, setCurrentDate] = useState('');
     const [currentTime, setCurrentTime] = useState('');
@@ -21,7 +20,6 @@ function Pay() {
         document.body.style.backgroundImage = `url('${Image}')`;
         document.body.style.backgroundSize = '1520px 675px';
         document.body.style.backgroundRepeat = 'no-repeat';
-        document.body.style.backgroundColor = 'black';
         
         const date = new Date();
         const formattedDate = `${date.getDate().toString().padStart(2, '0')}.${(date.getMonth() + 1).toString().padStart(2, '0')}.${date.getFullYear().toString().slice(-2)}`;
@@ -35,12 +33,6 @@ function Pay() {
     
     }, []);
 
-    const location = useLocation();
-    const sum  = location.state || {};
-    
-    console.log(location.state);
-    console.log(sum);
-
     return (
         
         <div className='pay-page'>
@@ -49,12 +41,10 @@ function Pay() {
                 <span>date - {currentDate}</span>
                 <span>time - {currentTime}</span>
                 <span>ID - 606012345</span>
+                <span>guitars - {sum}$</span>
                 <span>shipping - 100$</span>
-                <span>tax - 5% = {sum / 20}</span>
+                <span>tax - 5% = {sum / 20}$</span>
                 <span>total - {shipping + sum}$</span>
-                <Link to='/'>
-                    <button className='go-home'>return to HomePage</button>
-                </Link>
             </div>
 
             <div className='small-container'>

@@ -8,11 +8,12 @@ import Page1 from './page1.jsx';
 import Page2 from './page2.jsx';
 import LoginSignup from './LoginSignup.jsx';
 import Pay from './Pay.jsx';
-import Congratulations from './Congratulations.jsx';
+import Congratulations from './congratulations.jsx';
 
 function App() {
 
     const [cart, setCart] = useState([]);
+    const [sum, setSum] = useState(0);
  
     return (
 
@@ -20,12 +21,12 @@ function App() {
       <Routes>
         <Route element={ <Layout/> }> 
 
-          <Route path="/" element={<Home cart={cart} setCart={setCart}/>}/>
-          <Route path="/page1" element={<Page1 cart={cart} setCart={setCart}/>}/>
+          <Route path="/" element={<Home cart={cart} setCart={setCart} setSum={setSum}/>}/>
+          <Route path="/page1" element={<Page1 cart={cart} setCart={setCart} sum={sum} setSum={setSum}/>}/>
           <Route path="/page2" element={<Page2/>}/>
           <Route path="/LoginSignup" element={<LoginSignup/>}/>
-          <Route path="/Pay" element={<Pay/>}/>
-          <Route path="/Congratulations" element={<Congratulations/>}/>
+          <Route path="/Pay" element={<Pay sum={sum}/>}/>
+          <Route path="/Congratulations" element={<Congratulations cart={cart} setCart={setCart} sum={sum} setSum={setSum}/>}/>
 
         </Route>
       </Routes>

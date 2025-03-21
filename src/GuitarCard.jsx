@@ -3,12 +3,14 @@ import './guitars.css'
 
 import { Link } from 'react-router-dom';
 
-function GuitarCard({guitar, updateCart, onAddToCart}) {
+function GuitarCard({guitar, updateCart, onAddToCart, setSum}) {
 
   const handleClick = () => {
     onAddToCart()
     updateCart(guitar)
   }
+
+  const setPrice = () => setSum(guitar.price);
 
   return (
 
@@ -38,7 +40,7 @@ function GuitarCard({guitar, updateCart, onAddToCart}) {
 
       <div className='guitar-buttons'>
         <Link to='/Pay'>
-          <button className='guitar-button'>Pay Now</button>
+          <button className='guitar-button' onClick={setPrice}>Pay Now</button>
         </Link>
         <button className='guitar-button' onClick={handleClick}> Add to cart</button>
       </div>

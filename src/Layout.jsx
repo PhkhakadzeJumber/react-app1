@@ -13,7 +13,7 @@ function Layout() {
 
     <>
 
-    {location.pathname !== '/LoginSignup' && location.pathname !== '/Pay' && <Navbar searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>}
+    {location.pathname !== '/Congratulations' && location.pathname !== '/LoginSignup' && location.pathname !== '/Pay' && <Navbar searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>}
 
     <main>
       <Outlet context={searchQuery}/>

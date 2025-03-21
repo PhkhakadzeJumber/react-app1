@@ -8,6 +8,7 @@ import Page1 from './page1.jsx';
 import Page2 from './page2.jsx';
 import LoginSignup from './LoginSignup.jsx';
 import Pay from './Pay.jsx';
+import Congratulations from './Congratulations.jsx';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
           <Route path="/page2" element={<Page2/>}/>
           <Route path="/LoginSignup" element={<LoginSignup/>}/>
           <Route path="/Pay" element={<Pay/>}/>
+          <Route path="/Congratulations" element={<Congratulations/>}/>
 
         </Route>
       </Routes>

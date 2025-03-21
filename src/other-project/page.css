@@ -177,6 +177,15 @@
 
 .city-photo {
     width: 220px;
+    margin-bottom: 10px;
+}
+
+.city-box {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 

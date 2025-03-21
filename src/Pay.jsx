@@ -58,10 +58,12 @@ function Pay() {
             </div>
 
             <div className='small-container'>
-                <button className='pay-choice'>
-                    <FontAwesomeIcon icon={faCreditCard} size='2x'/>
-                    <h2 className='pay-text'>by card</h2>
-                </button>
+                <Link to='/Congratulations'>
+                    <button className='pay-choice'>
+                        <FontAwesomeIcon icon={faCreditCard} size='2x'/>
+                        <h2 className='pay-text'>by card</h2>
+                    </button>
+                </Link>
                 <button className='pay-choice'>
                     <FontAwesomeIcon icon={faWallet} size='2x'/>
                     <h2 className='pay-text'>by cash</h2>

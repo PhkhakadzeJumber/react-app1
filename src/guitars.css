@@ -1,7 +1,7 @@
 .homepage-container {
 
-  margin-left: 80px;
-  margin-top: 80px;
+  margin-left: 90px;
+  margin-top: 110px;
 
 }
 
@@ -9,7 +9,6 @@
   
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
-  padding-top: 30px;
   margin-bottom: 30px;
   margin-left: 30px;
 
@@ -20,7 +19,7 @@
 }
 
 .website-content {
-  margin-left: 20px;
+  margin-left: 40px;
   display: flex;
 }
 
@@ -53,14 +52,15 @@
 
   width: 300px;
   height: 300px;
-  padding-right: 60px;
-  padding-left: 60px;
-  padding-top: 40px;
-  
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 .guitar-name {
   font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
   
 }
 
@@ -69,7 +69,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+  gap: 10px;
 }
 
 .guitar-buttons {
@@ -78,6 +78,7 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
+  margin-top: 15px;
 
 }
 
@@ -133,6 +134,7 @@
   cursor: pointer;
   background-color: lightcoral;
   margin-bottom: 10px;
+  margin-top: 15px;
   border-radius: 4px;
   transition: opacity 0.1s;
 }

@@ -37,14 +37,14 @@ function Pay({sum}) {
         
         <div className='pay-page'>
             <div className='payment-document'>
-                <h1>payment document</h1>
+                <h1 className='document-title'>payment document</h1>
                 <span>date - {currentDate}</span>
                 <span>time - {currentTime}</span>
                 <span>ID - 606012345</span>
                 <span>guitars - {sum}$</span>
                 <span>shipping - 100$</span>
                 <span>tax - 5% = {sum / 20}$</span>
-                <span>total - {shipping + sum}$</span>
+                <span>total - {shipping + sum + sum / 20}$</span>
             </div>
 
             <div className='small-container'>

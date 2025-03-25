@@ -7,7 +7,7 @@
   top: 0;
   right: 0;
   left: 0;
-  height: 55px;
+  height: 70px;
 
   background-color: lightblue;
   padding-top: 15px;
@@ -27,7 +27,7 @@
 
   display: flex;
   align-items: center;
-  height: 55px;
+  height: 40px;
   font-size: 18px; 
   color: red; 
   background-color: lightblue;
@@ -64,7 +64,7 @@
 .search-bar {
 
   flex: 1;
-  height: 31px;
+  height: 35px;
   padding-left: 10px;
   font-size: 15px;
   border-color: grey;

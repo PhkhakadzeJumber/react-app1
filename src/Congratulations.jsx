@@ -10,19 +10,16 @@ import myAudio from './assets/audio.mp3';
 function congratulations({cart, setCart, sum, setSum}) {
 
     useEffect(() => {
-            document.body.style.margin = '0';
-            document.body.style.height = '100vh';
+            document.body.classList.add("body-background");
             document.body.style.backgroundImage = `url('${Image}')`;
-            document.body.style.backgroundSize = '1080px 675px';
-            document.body.style.backgroundRepeat = 'no-repeat';
-            document.body.style.backgroundPosition = 'right';
 
             const audio = new Audio(myAudio);
             audio.volume = 0.1;
             audio.play();
     
             return () => {
-                document.body.style.background = '';
+                document.body.classList.remove("body-background");
+                document.body.style.backgroundImage = "";
                 audio.pause();
                 audio.currentTime = 0;
             };
@@ -38,13 +35,11 @@ function congratulations({cart, setCart, sum, setSum}) {
 
     return (
         <div className='congrats-page'>
-            <div className='congratulate'>
-                <h1>Congratulations!</h1>
-                <h2>you have successfully purchased a new guitar!</h2>
-                <Link to='/'>
-                    <button className='go-home' onClick={returnHome}>return to HomePage</button>
-                </Link>
-            </div>
+            <h1>Congratulations!</h1>
+            <h2>you have successfully purchased a new guitar!</h2>
+            <Link to='/'>
+                <button className='go-home' onClick={returnHome}>return to HomePage</button>
+            </Link>
         </div>
     );
 

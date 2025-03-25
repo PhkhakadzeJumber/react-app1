@@ -280,6 +280,11 @@
   border-radius: 10px;
   margin-right: 20px;
   font-size: 110%;
+  gap: 3px;
+}
+
+.document-title {
+  margin-bottom: 30px;
 }
 
 .small-container {
@@ -315,6 +320,25 @@
   opacity: 0.75;
 }
 
+.body-background {
+  margin: 0;
+  height: 100vh;
+  background-size: 70% 100%;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.congrats-page {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+  margin-left: 40px;
+  font-size: clamp(1rem, 2vw, 150%);
+  gap: 70px;
+}
+
 .go-home {
   width: 150px;
   height: 50px;
@@ -322,17 +346,7 @@
   color: white;
   border: none;
   border-radius: 4px;
-  margin-top: 60px;
   cursor: pointer;
-}
-
-.congratulate {
-  width: 350px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-left: 40px;
-  font-size: 150%;
 }
 
 

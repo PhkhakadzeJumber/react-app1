@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { createGlobalStyle } from "styled-components";
 
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Home.jsx';
@@ -12,10 +13,23 @@ import Congratulations from './congratulations.jsx';
 
 function App() {
 
+    const GlobalStyle = createGlobalStyle`
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+      }
+    `;
+
     const [cart, setCart] = useState([]);
     const [sum, setSum] = useState(0);
  
     return (
+
+    <>
+
+    <GlobalStyle />
 
     <Router>
       <Routes>
@@ -31,6 +45,8 @@ function App() {
         </Route>
       </Routes>
     </Router>
+
+    </>
 
     );
 

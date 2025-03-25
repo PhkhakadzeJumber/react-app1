@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGuitar, faSearch, faShoppingCart, faPlusSquare, faHistory, faCog } from '@fortawesome/free-solid-svg-icons';
 
+import myImage from './assets/king-image.jpg';
+
 function Navbar({searchQuery, setSearchQuery}) {
 
   const style1 = {display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'};
@@ -42,8 +44,9 @@ function Navbar({searchQuery, setSearchQuery}) {
         <div className='right-section'>
 
         <Link to="/LoginSignup"> 
-          <div className="profile">
-            profile
+          <div className='profile-info'>
+            <span>Juba Phkhakadze</span>
+            <img className='profile-pic' src={myImage} alt="whose the king?" />
           </div>
         </Link>
     

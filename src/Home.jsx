@@ -91,7 +91,7 @@ function Home({cart, setCart, setSum}) {
     <div className='sorting'> 
 
       <div className='sort-by'>
-        <select onChange={(e) => sortGuitars(e.target.value)}>
+        <select className='sort' onChange={(e) => sortGuitars(e.target.value)}>
           <option value="">sort items</option>
           <option value="name">by name</option>
           <option value="year">by year</option>
@@ -101,7 +101,7 @@ function Home({cart, setCart, setSum}) {
       </div>
 
       <div className='num-in-cart'>
-        <span>number of items in the cart: {counter}</span> 
+        <span className='cart-number'>number of items in the cart: {counter}</span> 
       </div>
 
     </div>

@@ -54,6 +54,7 @@
 
 .right-section {
 
+  display: flex;
   width: 300px;
   background-color: lightblue;
   display: flex;
@@ -95,10 +96,17 @@
 
 }
 
-.profile {
+.profile-info {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  gap: 10px;
+}
 
-  padding-left: 20px;
- 
+.profile-pic {
+  height: 70px;
+  padding-bottom: 15px;
 }
 
 .side-bar {
@@ -152,7 +160,7 @@
   align-items: center;
   justify-content: center;
   width: 65px;
-  height: 60px;
+  height: 65px;
   transition: opacity 0.1s;
 
 }

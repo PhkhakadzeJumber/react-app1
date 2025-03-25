@@ -31,11 +31,11 @@ function GuitarCard({guitar, updateCart, onAddToCart, setSum}) {
       </div>
 
       <div className='guitar-price'>
-        <p>price: {guitar.price}</p>
+        <p>price: {guitar.price}$</p>
       </div>
 
       <div className='guitar-amount'>
-        <p>amount: {guitar.amount}</p>
+        <p>amount: {guitar.amount} units</p>
       </div>
 
       <div className='guitar-buttons'>

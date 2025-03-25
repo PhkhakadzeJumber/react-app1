@@ -18,6 +18,14 @@
   width: 900px;
 }
 
+.sort {
+  font-size: 105%;
+}
+
+.cart-number {
+  font-size: 105%;
+}
+
 .website-content {
   margin-left: 40px;
   display: flex;
@@ -50,11 +58,9 @@
 
 .guitar-image {
 
-  width: 300px;
-  height: 300px;
   margin-right: 50px;
   margin-left: 50px;
-  margin-top: 40px;
+  margin-top: 30px;
   margin-bottom: 20px;
 }
 
@@ -92,7 +98,7 @@
   transition: opacity 0.1s;
   background-color: skyblue;
   border-style: hidden;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   margin-left: 5px;
   margin-right: 5px;
 

@@ -5,15 +5,15 @@ import "./guitars.css";
 import { useOutletContext } from "react-router-dom";
 import { useState, useEffect } from 'react';
 
-import flyingV from './assets/flyingV.jpg';
-import lesPaul from './assets/lesPaul.jpg';
-import Fender from './assets/fender.jpg';
-import Explorer from './assets/explorer.jpg';
-import ESP_LTD from './assets/ESP-LTD.jpg';
-import rhoadsV from './assets/rhoadsV.jpg';
-import Telecaster from './assets/telecaster.jpg';
-import Ibanez from './assets/ibanez.jpg';
-import acoustic from './assets/acoustic.jpg';
+import flyingV from './assets/flyingV.png';
+import lesPaul from './assets/lesPaul.png';
+import Fender from './assets/fender.png';
+import Explorer from './assets/explorer.png';
+import ESP_LTD from './assets/ESP_LTD.png';
+import rhoadsV from './assets/rhoadsV.png';
+import Telecaster from './assets/telecaster.png';
+import Ibanez from './assets/ibanez.png';
+import acoustic from './assets/acoustic.png';
 
 function Home({cart, setCart, setSum}) {
 

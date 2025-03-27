@@ -38,35 +38,34 @@ function Pay({sum}) {
         <div className='pay-page'>
             <div className='payment-document'>
                 <h1 className='document-title'>payment document</h1>
-                <span>date - {currentDate}</span>
-                <span>time - {currentTime}</span>
-                <span>ID - 606012345</span>
-                <span>guitars - {sum}$</span>
-                <span>shipping - 100$</span>
-                <span>tax - 5% = {sum / 20}$</span>
-                <span>total - {shipping + sum + sum / 20}$</span>
+                <span className='doc-span'>date - {currentDate}</span>
+                <span className='doc-span'>time - {currentTime}</span>
+                <span className='doc-span'>ID - 606012345</span>
+                <span className='doc-span'>guitars - {sum}$</span>
+                <span className='doc-span'>shipping - 100$</span>
+                <span className='doc-span'>tax - 5% = {sum / 20}$</span>
+                <span className='doc-span'>total - {shipping + sum + sum / 20}$</span>
             </div>
 
             <div className='small-container'>
                 <Link to='/Congratulations'>
                     <button className='pay-choice'>
-                        <FontAwesomeIcon icon={faCreditCard} size='2x'/>
-                        <h2 className='pay-text'>by card</h2>
+                        <FontAwesomeIcon icon={faCreditCard} size='2x' className='doc-icon'/>
+                        <h2 className='doc-span'>by card</h2>
                     </button>
                 </Link>
                 <button className='pay-choice'>
-                    <FontAwesomeIcon icon={faWallet} size='2x'/>
-                    <h2 className='pay-text'>by cash</h2>
+                    <FontAwesomeIcon icon={faWallet} size='2x' className='doc-icon'/>
+                    <h2 className='doc-span'>by cash</h2>
                 </button>
                 <button className='pay-choice'>
-                    <FontAwesomeIcon icon={faQrcode} size='3x'/>
-                    <h2 className='pay-text'>by QR</h2>
+                    <FontAwesomeIcon icon={faQrcode} size='3x' className='doc-icon'/>
+                    <h2 className='doc-span'>by QR</h2>
                 </button>
             </div>
         </div>
 
     );
-
 
 }
 

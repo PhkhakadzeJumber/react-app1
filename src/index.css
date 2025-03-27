@@ -9,7 +9,7 @@
   left: 0;
   height: 70px;
 
-  background-color: lightblue;
+  background-color: #121212;
   padding-top: 15px;
   padding-left: 15px;
 
@@ -30,7 +30,7 @@
   height: 40px;
   font-size: 18px; 
   color: red; 
-  background-color: lightblue;
+  background-color: #121212;
   border: none;
   cursor: pointer;
 
@@ -56,7 +56,7 @@
 
   display: flex;
   width: 300px;
-  background-color: lightblue;
+  background-color: #121212;
   display: flex;
   align-items: center;
 
@@ -68,10 +68,11 @@
   height: 35px;
   padding-left: 10px;
   font-size: 15px;
-  border-color: grey;
+  border-color: white;
   border-width: 1px;
   border-style: solid;
   border-radius: 4px;
+  background-color: #242424;
   box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
   outline: none;
 
@@ -88,10 +89,11 @@
 
   height: 35px;
   width: 45px;
-  border-color: grey;
+  border-color: white;
   border-width: 1px;
   border-style: solid;
   margin-left: -10px;
+  background-color: #242424;
   cursor: pointer;
 
 }
@@ -111,7 +113,7 @@
 
 .side-bar {
 
-  background-color: lightblue;
+  background-color: #121212;
   color: white;
 
   position: fixed;
@@ -155,7 +157,7 @@
 .btn {
 
   cursor: pointer;
-  background-color: lightcyan;
+  background-color: #121212;;
   border: none;
   align-items: center;
   justify-content: center;

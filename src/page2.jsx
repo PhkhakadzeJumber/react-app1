@@ -12,22 +12,22 @@ function page2() {
       <div className='diff-settings'>
 
         <div className='line'>
-          <text className='settings-text'> account </text>
+          <span className='settings-text'> account </span>
           <button className='switch'>switch</button>
         </div>
 
         <div className='line'>
-          <text className='settings-text' > mode switch</text>
+          <span className='settings-text' > mode switch</span>
           <Toggle />
         </div>
 
         <div className='line'>
-          <text className='settings-text'> add some profile info </text>
+          <span className='settings-text'> add some profile info </span>
           <button className='add-profile'>add</button>
         </div>
 
         <div className='line'>
-          <text className='settings-text'> language </text>
+          <span className='settings-text'> language </span>
           <select>
             <option>georgian</option>
             <option>english</option>

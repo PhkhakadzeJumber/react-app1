@@ -1,4 +1,5 @@
 .homepage-container {
+  min-height: 100vh;
   height: 100%;
   padding-left: 90px;
   padding-top: 110px;
@@ -39,7 +40,7 @@
   justify-content: center;
   align-items: center;
 
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   margin-right: 30px;
   margin-left: 10px;
   background-color: #242424;
@@ -60,12 +61,45 @@
 .guitar-image {
   margin-right: 50px;
   margin-left: 50px;
-  margin-top: 40px;
+  margin-top: 25px;
   margin-bottom: 20px;
   padding-top: 5px;
-  background-color: white;
+  
   border-radius: 16px;
 }
+
+.reactive-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 25px;
+}
+
+.fire-button path {
+  fill: firebrick;
+}
+
+.fire-button:hover {
+  transform: scale(1.3); 
+  transition: 0.15s ease-in-out;
+}
+
+.love-button path {
+  fill: rgb(255, 77, 107);
+}
+
+.like-button path {
+  fill: rgb(0, 99, 133);
+}
+
+.dislike-button path {
+  fill: rgb(0, 99, 133);
+}
+
+.trash-button path {
+  fill: rgb(95, 78, 78);
+}
+
 
 .guitar-name {
   font-family: Arial, Helvetica, sans-serif;

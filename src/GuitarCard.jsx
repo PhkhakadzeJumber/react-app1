@@ -3,6 +3,9 @@ import './guitars.css'
 
 import { Link } from 'react-router-dom';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFire, faHeart, faThumbsUp, faThumbsDown, faTrash } from '@fortawesome/free-solid-svg-icons';
+
 function GuitarCard({guitar, updateCart, onAddToCart, setSum}) {
 
   const handleClick = () => {
@@ -15,6 +18,14 @@ function GuitarCard({guitar, updateCart, onAddToCart, setSum}) {
   return (
 
     <div className='guitar'>
+
+      <div className='reactive-buttons'>
+        <FontAwesomeIcon icon={faFire} size='2x' className='fire-button'/>
+        <FontAwesomeIcon icon={faHeart} size='2x' className='love-button'/>
+        <FontAwesomeIcon icon={faThumbsUp} size='2x' className='like-button'/>
+        <FontAwesomeIcon icon={faThumbsDown} size='2x' className='dislike-button'/>
+        <FontAwesomeIcon icon={faTrash} size='2x' className='trash-button'/>
+      </div>
 
     <div className='guitar-image'>
       <img src={guitar.image} alt={guitar.name} />

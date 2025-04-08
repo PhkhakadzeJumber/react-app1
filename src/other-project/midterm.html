@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Midterm</title>
+    </head>
+
+    <body>
+
+        <div class="guess">
+            <h2 class="title">Guess the Number!</h2>
+            <p>I'm thinking of a number between 1 and 100</p>
+            <div class="too-low">
+                <h1 id="low">
+                    📈
+                    Too low!
+                </h1>
+            </div>
+            <input id="Input" class="input" placeholder="Enter your guess"/>
+            <p class="please">Please enter a number between 1 and 100!</p>
+            <div class="buttons">
+                <button id="Guess" class="button">Guess</button>
+                <button id="Restart" class="button">Restart</button>
+            </div>
+            <h2 class="history">Guess History</h2>
+            <ul id="ul"></ul>
+        </div>
+       
+        <div class="stats">
+            <div class="stats1">
+                <h2 class="stat-text">Score: 
+                    <h2 id="score">0</h2>
+                </h2>
+            </div>
+            <div class="stats2">
+                <h2 class="stat-text">Attempts: 
+                    <h2 id="attempts">0 / 10</h2>
+                </h2>
+            </div>
+        </div>
+
+    </body>
+
+    <script src="code.js"></script>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>form</title>
+        <link rel="stylesheet" href="form.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="form-container">
+            <h1>Group Form</h1>
+            <form action="">
+                <div class="form-row" id="name">
+                    <div>
+                        <label for="firstname">First name</label>
+                        <input type="text" placeholder="First name" name="" id="firstname" class="text-inp">
+                    </div>
+                    <div>
+                        <label for="lastname">Last name</label>
+                        <input type="text" placeholder="Last name" name="" id="lastname" class="text-inp">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="you@company.com" name="" id="email" class="text-inp">
+                </div>
+
+                <div class="form-row">
+                    <label for="password">password</label>
+                    <input type="password" placeholder="Password" name="" id="password" class="text-inp">
+                </div>
+
+                <div class="form-row">
+                    <label for="team">Team size</label>
+                    <select name="" id="team">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="checkboxes">Technologies</label>
+                    <div id="checkboxes">
+                        <div class="box-column">
+                            <div>
+                                <input type="checkbox" name="" id="html">
+                                <label for="html">Html</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="" id="css">
+                                <label for="css">Css</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="" id="js">
+                                <label for="js">Javascript</label>
+                            </div>
+                        </div>
+                        <div class="box-column">
+                            <div>
+                                <input type="checkbox" name="" id="react">
+                                <label for="react">Reactjs</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="" id="figma">
+                                <label for="Figma">Figma</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="" id="github">
+                                <label for="github">Github</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" id="btn">Submit</button>
+            </form>
+        </div>
+
+    </body>
+
+    <script src="form.js"></script>
+
+</html>

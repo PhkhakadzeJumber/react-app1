@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    background-color: #ECEAE4;
+}
+
+.form-container {
+    position: absolute;
+    left: 50%;
+    top: 5vh;
+    transform: translateX(-50%);
+    height: 90vh;
+    width: 60%;
+}
+
+.form-container h1 {
+    margin-bottom: 1rem;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 60vh;
+}
+
+.text-inp {
+    height: 3rem;
+    width: 100%;
+    padding-left: 10px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+.form-row {
+    margin-top: 1rem;
+}
+
+.form-row label {
+    display: block;
+    padding-bottom: 5px;
+}
+
+#name {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#name div {
+    width: 45%;
+}
+
+#team {
+    height: 3rem;
+    width: 45%;
+    padding-left: 10px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+#checkboxes {
+    display: flex;
+}
+
+.box-column {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+#checkboxes label {
+    display: inline;
+}
+
+#btn {
+    padding: 10px;
+    margin-top: 40px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+}
+
+.error {
+    font-size: small;
+    color: #fa3939;
+}

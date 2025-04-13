@@ -21,16 +21,16 @@ input.addEventListener("input", () => {
 });
 
 guess.addEventListener("click", () => {
-    cnt -= 1;
-
     const myGuess = parseInt(inputVal);
     if(inputVal.length == 0) 
         return alert("input value required");
     else if(isNaN(myGuess) || myGuess != inputVal)
         return alert("input must be a number");
-    else if(myGuess > 100 || myGuess < 0)
+    else if(myGuess > 100 || myGuess <= 0)
         return alert("not a valid input");
 
+    cnt -= 1;
+    
     const newElement = document.createElement("li");
 
     if(myGuess > num) {

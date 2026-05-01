@@ -10,21 +10,31 @@ import myAudio from './assets/audio.mp3';
 function congratulations({cart, setCart, sum, setSum}) {
 
     useEffect(() => {
-            document.body.classList.add("body-background");
-            document.body.style.backgroundImage = `url('${Image}')`;
+        document.body.classList.add("body-background");
+        document.body.style.backgroundImage = `url('${Image}')`;
 
-            const audio = new Audio(myAudio);
-            audio.volume = 0.1;
-            audio.play();
-    
-            return () => {
-                document.body.classList.remove("body-background");
-                document.body.style.backgroundImage = "";
-                audio.pause();
-                audio.currentTime = 0;
-            };
-        
-        }, []);
+        const audio = new Audio(myAudio);
+        audio.volume = 0.1;
+
+        // Store the play promise and only pause after it resolves
+        const playPromise = audio.play();
+
+        return () => {
+            document.body.classList.remove("body-background");
+            document.body.style.backgroundImage = "";
+
+            if (playPromise !== undefined) {
+                playPromise
+                    .then(() => {
+                        audio.pause();
+                        audio.currentTime = 0;
+                    })
+                    .catch(() => {
+                        // Autoplay was blocked — nothing to pause
+                    });
+            }
+        };
+    }, []);
 
     const returnHome = () => {
         setCart([]);

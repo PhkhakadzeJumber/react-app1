@@ -1,6 +1,6 @@
 import React from 'react';
 import './otherPages.css';
-import CartCard from './cartCard';
+import CartCard from './CartCard';
 
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";

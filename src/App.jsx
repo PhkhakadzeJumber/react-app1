@@ -10,6 +10,8 @@ import Page2 from './page2.jsx';
 import LoginSignup from './LoginSignup.jsx';
 import Pay from './Pay.jsx';
 import Congratulations from './Congratulations.jsx';
+import DynamicPage from './DynamicPage.jsx';
+import FormPage from './FormPage.jsx';
 
 function App() {
 
@@ -42,7 +44,9 @@ function App() {
           <Route path="/LoginSignup" element={<LoginSignup/>}/>
           <Route path="/Pay" element={<Pay sum={sum}/>}/>
           <Route path="/Congratulations" element={<Congratulations cart={cart} setCart={setCart} sum={sum} setSum={setSum}/>}/>
-
+          <Route path="/product/:id" element={<DynamicPage />} />
+          <Route path="/form" element={<FormPage />} />
+          
         </Route>
       </Routes>
     </Router>

@@ -1,12 +1,14 @@
 import React from 'react';
 import './guitars.css'
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFire, faHeart, faThumbsUp, faThumbsDown, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 function GuitarCard({guitar, updateCart, onAddToCart, setSum}) {
+
+  const navigate = useNavigate();
 
   const handleClick = () => {
     onAddToCart()
@@ -27,36 +29,37 @@ function GuitarCard({guitar, updateCart, onAddToCart, setSum}) {
         <FontAwesomeIcon icon={faTrash} size='2x' className='trash-button'/>
       </div>
 
-    <div className='guitar-image'>
-      <img src={guitar.image} alt={guitar.name} />
-    </div>
-
-    <div className='guitar-name'>
-      <h1>{guitar.name}</h1>
-    </div>
-
-    <div className='guitar-description'>
-
-      <div className='guitar-year'>
-        <p>year: {guitar.year}</p>
+      {/* Clicking image or name navigates to the dynamic page */}
+      <div className='guitar-image' onClick={() => navigate(`/product/${guitar.name}`)} style={{cursor: 'pointer'}}>
+        <img src={guitar.image} alt={guitar.name} />
       </div>
 
-      <div className='guitar-price'>
-        <p>price: {guitar.price}$</p>
+      <div className='guitar-name' onClick={() => navigate(`/product/${guitar.name}`)} style={{cursor: 'pointer'}}>
+        <h1>{guitar.name}</h1>
       </div>
 
-      <div className='guitar-amount'>
-        <p>amount: {guitar.amount} units</p>
-      </div>
+      <div className='guitar-description'>
 
-      <div className='guitar-buttons'>
-        <Link to='/Pay'>
-          <button className='guitar-button' onClick={setPrice}>Pay Now</button>
-        </Link>
-        <button className='guitar-button' onClick={handleClick}> Add to cart</button>
-      </div>
+        <div className='guitar-year'>
+          <p>year: {guitar.year}</p>
+        </div>
 
-    </div>
+        <div className='guitar-price'>
+          <p>price: {guitar.price}$</p>
+        </div>
+
+        <div className='guitar-amount'>
+          <p>amount: {guitar.amount} units</p>
+        </div>
+
+        <div className='guitar-buttons'>
+          <Link to='/Pay'>
+            <button className='guitar-button' onClick={setPrice}>Pay Now</button>
+          </Link>
+          <button className='guitar-button' onClick={handleClick}> Add to cart</button>
+        </div>
+
+      </div>
 
     </div>
       

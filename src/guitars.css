@@ -12,7 +12,15 @@
   display: flex;
   margin-bottom: 30px;
   margin-left: 30px;
+  gap: 20px;
+}
 
+.form-button {
+  font-size: 105%;
+  background-color: #212121;
+  border-style: hidden;
+  color: white;
+  cursor: pointer;
 }
 
 .sort-by {
@@ -31,6 +39,8 @@
 .website-content {
   margin-left: 40px;
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .guitar {
